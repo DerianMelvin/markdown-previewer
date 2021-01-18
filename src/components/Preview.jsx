@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Preview = () => {
+const Preview = (props) => {
   return (
     <div>
-      
+      <textarea id="preview" value={props.markdown}></textarea>
     </div>
   );
 }
