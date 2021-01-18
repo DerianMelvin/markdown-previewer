@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Toolbar = () => {
+const Toolbar = (props) => {
   return (
-    <div>
-      
+    <div id="toolbar">
+      <h2>{props.header}</h2>
     </div>
   );
 }
