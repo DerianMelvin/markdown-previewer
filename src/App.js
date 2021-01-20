@@ -46,7 +46,7 @@ function someFunction(var) {
 }
 \`\`\`
 
-To display an image, simply add it like this: ![image](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+You can also display an image as such: ![image](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
 
 `;
 class App extends Component {
@@ -63,9 +63,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
+        <header>
           <h1>Markdown Previewer</h1>
-        </div>
+        </header>
 
         <div id="container">
           <div id="container-editor">
