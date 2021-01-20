@@ -6,6 +6,49 @@ import Preview from "./components/Preview.jsx";
 
 import "./App.css";
 
+let placeholder = `
+# Hello There!
+
+you are currently reading text in a markup language called [Markdown](https://www.markdownguide.org/). This is simply a small introduction of its features.
+
+## This is a sub-heading
+
+This is a **bold** word.
+While this is an *italic* word.
+This can be ***combined*** as well.
+
+1. This is the list item.
+2. The list is displayed in numeric order
+3. That increments for every list.
+    1. It can display indented items
+    2. That also displays item numerically.
+
+- You can use unordered list as well.
+- It functions the same as ordered list
+- But without the numbers
+    - It can also indent items
+    - which is displayed with a different bullet style.
+
+> This is a text inside a blockquote.
+> 
+> You can also add multiple texts or paragraphs inside it.
+>> Additionally, you can add nested blockquotes as well.
+
+This is how you display an inline \`<p>code</p>\`.
+
+It can also display code blocks like this:
+
+\`\`\`
+const someVariable = "some string";
+
+function someFunction(var) {
+  console.log(var);
+}
+\`\`\`
+
+To display an image, simply add it like this: ![image](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+
+`;
 class App extends Component {
   state = {
     markdown: placeholder,
@@ -20,22 +63,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Markdown Previewer</h1>
-
-        <div id="container-editor">
-          <Toolbar header="Editor" />
-          <Editor markdown={this.state.markdown} handleChange={this.handleChange} />
+        <div>
+          <h1>Markdown Previewer</h1>
         </div>
 
-        <div id="container-preview">
-          <Toolbar header="Preview" />
-          <Preview markdown={this.state.markdown} />
+        <div id="container">
+          <div id="container-editor">
+            <Toolbar header="Editor" />
+            <Editor markdown={this.state.markdown} handleChange={this.handleChange} />
+          </div>
+          
+          <div id="container-preview">
+            <Toolbar header="Preview" />
+            <Preview markdown={this.state.markdown} />
+          </div>
         </div>
       </div>
     );
   }
 }
-
-let placeholder = "This is a sample sentence for placeholder";
 
 export default App;
