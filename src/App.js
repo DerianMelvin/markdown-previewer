@@ -9,17 +9,17 @@ import "./App.css";
 let placeholder = `
 # Hello There!
 
-you are currently reading text in a markup language called [Markdown](https://www.markdownguide.org/). This is simply a small introduction of its features.
+you are currently reading this text in a markup language called [Markdown](https://www.markdownguide.org/). This is simply a small introduction of its features.
 
 ## This is a sub-heading
 
 This is a **bold** word.
 While this is an *italic* word.
-This can be ***combined*** as well.
+both of these can be ***combined*** as well.
 
-1. This is the list item.
-2. The list is displayed in numeric order
-3. That increments for every list.
+1. This is the ordered list.
+2. The list will display items in numeric order
+3. That increments for every list item.
     1. It can display indented items
     2. That also displays item numerically.
 
